@@ -65,6 +65,9 @@ class DeliveryTests(unittest.TestCase):
                 self.assertEqual(z.namelist()[0], "mimetype")
                 self.assertEqual(z.getinfo("mimetype").compress_type, zipfile.ZIP_STORED)
                 self.assertEqual(z.read("mimetype"), b"application/epub+zip")
+                for entry in z.infolist():
+                    self.assertEqual(entry.create_system, 3)
+                    self.assertEqual(entry.external_attr >> 16, 0o100644)
                 for item in z.namelist()[1:]:
                     ET.fromstring(z.read(item))
                 package = ET.fromstring(z.read("EPUB/package.opf"))

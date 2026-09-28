@@ -26,3 +26,7 @@ python3 samples/delivery_demo.py
 ffprobe no decodifica todo el contenido ni evalúa calidad narrativa o de voz. El EPUB se comprueba estructuralmente, sin ejecutar EPUBCheck. La fixture no representa generación con IA ni una producción editorial completa.
 
 Las pruebas nuevas ejercitan las piezas públicas. No se suman a las cifras históricas de tests del producto como si fueran la misma suite.
+
+## Reproducibilidad entre sistemas
+
+El generador fija fecha, origen ZIP y permisos de cada entrada. Sin fijar el origen, Python produce cabeceras distintas en Windows y Linux aunque el contenido editorial sea el mismo. La comparación byte a byte de CI comprueba esta propiedad además de validar la estructura.

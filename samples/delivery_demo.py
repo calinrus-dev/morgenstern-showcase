@@ -28,6 +28,10 @@ def make_epub(path: Path) -> None:
     with zipfile.ZipFile(path, "w") as archive:
         for name, text in FILES.items():
             entry = zipfile.ZipInfo(name, date_time=(2026, 9, 28, 0, 0, 0))
+            # ZipInfo otherwise embeds the host OS (Windows vs Unix).
+            # Fix both origin and mode so identical input has identical bytes.
+            entry.create_system = 3
+            entry.external_attr = 0o100644 << 16
             entry.compress_type = zipfile.ZIP_STORED
             archive.writestr(entry, text.encode("utf-8"))
 
