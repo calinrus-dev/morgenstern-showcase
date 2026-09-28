@@ -4,27 +4,27 @@
 
 ## Qué enseña esta publicación
 
-Guion editorial con una obra ficticia: abrir un esquema, revisar una sección y aprobar una propuesta.
+Guion de una obra ficticia: organizar un esquema, coordinar generación con IA, revisar capítulos y preparar EPUB y audiolibro.
 
-No se incluyen manuscritos, conversaciones, prompts internos, claves de proveedores ni material de clientes.
+La documentación del proyecto incluye flujos de exportación editorial y audio. El escaparate no contiene manuscritos privados, prompts, voces ni credenciales de proveedores.
 
 ## Guion del caso de estudio
 
 Este guion sirve para explicar el recorrido documentado y preparar una demostración controlada. No afirma que se haya ejecutado completo durante esta publicación.
 
-1. **Abrir un proyecto.** Observar: Lectura y navegación de una estructura narrativa.
-2. **Revisar su estructura.** Observar: Conversación, documentos y acciones contextuales.
-3. **Trabajar un borrador.** Observar: Vista previa y decisiones explícitas antes de aplicar determinados cambios.
-4. **Preparar una salida.** Observar: Coordinación de borradores y preparación de salidas.
+1. **Definir la obra.** Observar: Organización narrativa de proyectos, esquemas, capítulos y material de trabajo.
+2. **Coordinar la generación.** Observar: Generación y coordinación de contenido a escala dentro de cada obra.
+3. **Revisar el contenido.** Observar: Vista previa, decisiones del autor y seguimiento de la producción.
+4. **Exportar EPUB y audio.** Observar: Exportación editorial y generación de audio desde el mismo proyecto.
 
 ## Lectura de la lámina
 
-![Lámina conceptual: Abrir un proyecto → Revisar su estructura → Trabajar un borrador → Preparar una salida.](../assets/experiencia.svg)
+![Lámina conceptual: Definir la obra → Coordinar la generación → Revisar el contenido → Exportar EPUB y audio.](../assets/experiencia.svg)
 
 La ilustración reúne las piezas y sus relaciones. Sus estados, textos de muestra y formas son editoriales. Las capturas reales, cuando existen, aparecen identificadas por separado.
 
 ## Evidencia disponible
 
-La documentación actual describe una interfaz Textual y un modo de demostración sin llamadas a proveedores. Esta publicación revisa ese recorrido sin ejecutar generación de pago ni verificar todas las exportaciones.
+El propietario identifica Morgenstern como su automatizador de producción de libros con IA, EPUB y audiolibros. El README y las guías existentes documentan generación, coordinación editorial y exportación EPUB/audio. Esta revisión comprueba ese alcance documental sin ejecutar generación de pago ni publicar una obra de prueba.
 
 [Alcance y próximos pasos](ESTADO.md)

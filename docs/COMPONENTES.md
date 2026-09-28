@@ -6,41 +6,41 @@
 
 Lámina conceptual con contenido ficticio. Las piezas de esta página describen la experiencia y sus responsabilidades visibles.
 
-## 01 / Explorador
+## 01 / Obras y estructura
 
-Lectura y navegación de una estructura narrativa.
+Organización narrativa de proyectos, esquemas, capítulos y material de trabajo.
 
-**En el recorrido:** Abrir un proyecto.
+**En el recorrido:** Definir la obra.
 
-**Responsabilidad relacionada:** Interfaz de autor.
+**Responsabilidad relacionada:** Espacio de autor.
 
-## 02 / Mesa de trabajo
+## 02 / Producción con IA
 
-Conversación, documentos y acciones contextuales.
+Generación y coordinación de contenido a escala dentro de cada obra.
 
-**En el recorrido:** Revisar su estructura.
+**En el recorrido:** Coordinar la generación.
 
-**Responsabilidad relacionada:** Servicios de proyecto.
+**Responsabilidad relacionada:** Producción con IA.
 
-## 03 / Revisión
+## 03 / Revisión y control
 
-Vista previa y decisiones explícitas antes de aplicar determinados cambios.
+Vista previa, decisiones del autor y seguimiento de la producción.
 
-**En el recorrido:** Trabajar un borrador.
+**En el recorrido:** Revisar el contenido.
 
-**Responsabilidad relacionada:** Procesos de producción.
+**Responsabilidad relacionada:** Revisión editorial.
 
-## 04 / Producción
+## 04 / EPUB y audiolibro
 
-Coordinación de borradores y preparación de salidas.
+Exportación editorial y generación de audio desde el mismo proyecto.
 
-**En el recorrido:** Preparar una salida.
+**En el recorrido:** Exportar EPUB y audio.
 
-**Responsabilidad relacionada:** Material creativo.
+**Responsabilidad relacionada:** Entregables EPUB y audio.
 
 ## Relación entre las piezas
 
-Abrir un proyecto → Revisar su estructura → Trabajar un borrador → Preparar una salida.
+Definir la obra → Coordinar la generación → Revisar el contenido → Exportar EPUB y audio.
 
 El recorrido permite discutir jerarquía, navegación y continuidad. La representación se simplifica a propósito y no publica los contratos internos de implementación.
 

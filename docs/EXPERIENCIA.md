@@ -4,39 +4,39 @@
 
 ## Intención
 
-Las notas, los capítulos y los resultados generados pueden perder contexto con facilidad. Morgenstern reúne navegación, revisión y procesos dentro del mismo proyecto creativo.
+Producir obras con IA a escala requiere conservar estructura, contexto y decisiones editoriales a lo largo de muchos pasos. Morgenstern coordina ese recorrido para que el material generado forme parte de una obra y pueda convertirse en entregables revisables.
 
 ## El recorrido
 
-### 1. Abrir un proyecto
+### 1. Definir la obra
 
-Lectura y navegación de una estructura narrativa.
-
-La revisión de esta fase observa si el contexto, la acción disponible y el resultado pueden entenderse sin perder el hilo del trabajo.
-
-### 2. Revisar su estructura
-
-Conversación, documentos y acciones contextuales.
+Organización narrativa de proyectos, esquemas, capítulos y material de trabajo.
 
 La revisión de esta fase observa si el contexto, la acción disponible y el resultado pueden entenderse sin perder el hilo del trabajo.
 
-### 3. Trabajar un borrador
+### 2. Coordinar la generación
 
-Vista previa y decisiones explícitas antes de aplicar determinados cambios.
+Generación y coordinación de contenido a escala dentro de cada obra.
 
 La revisión de esta fase observa si el contexto, la acción disponible y el resultado pueden entenderse sin perder el hilo del trabajo.
 
-### 4. Preparar una salida
+### 3. Revisar el contenido
 
-Coordinación de borradores y preparación de salidas.
+Vista previa, decisiones del autor y seguimiento de la producción.
+
+La revisión de esta fase observa si el contexto, la acción disponible y el resultado pueden entenderse sin perder el hilo del trabajo.
+
+### 4. Exportar EPUB y audio
+
+Exportación editorial y generación de audio desde el mismo proyecto.
 
 La revisión de esta fase observa si el contexto, la acción disponible y el resultado pueden entenderse sin perder el hilo del trabajo.
 
 ## Criterios de interacción
 
-- **La obra conserva su contexto.** Estructura, borradores y revisiones pertenecen a un proyecto reconocible.
-- **Ver antes de aplicar.** Las acciones sensibles deben presentar resultados y estado al autor.
-- **Herramientas separadas del contenido.** La plataforma de trabajo y el material narrativo cumplen funciones distintas.
+- **La obra es la unidad de producción.** Estructura, contexto y revisiones acompañan al material durante todo el proceso.
+- **Automatización con control editorial.** La escala de producción necesita estados claros y decisiones explícitas del autor.
+- **La salida forma parte del sistema.** La exportación a EPUB y audio se integra en el recorrido de trabajo.
 
 ## Accesibilidad como criterio de diseño
 

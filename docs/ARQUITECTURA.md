@@ -4,7 +4,7 @@
 
 ## Contexto
 
-Un espacio de trabajo para organizar proyectos narrativos, explorar su estructura, revisar borradores y coordinar procesos de producción.
+Un sistema de automatización editorial con IA para transformar ideas, esquemas y borradores en obras organizadas, libros EPUB y audiolibros. Reúne generación, coordinación de producción, revisión y exportación en un mismo entorno de autor.
 
 **Tecnologías asociadas al proyecto:** Python · Textual · Automatización.
 
@@ -14,22 +14,22 @@ Este mapa conceptual organiza la explicación del producto; no representa endpoi
 
 ```mermaid
 flowchart TD
-    A["Interfaz de autor"] --> B["Servicios de proyecto"]
-    B --> C["Procesos de producción"]
-    C --> D["Material creativo"]
+    A["Espacio de autor"] --> B["Producción con IA"]
+    B --> C["Revisión editorial"]
+    C --> D["Entregables EPUB y audio"]
 ```
 
-## La obra conserva su contexto
+## La obra es la unidad de producción
 
-Estructura, borradores y revisiones pertenecen a un proyecto reconocible.
+Estructura, contexto y revisiones acompañan al material durante todo el proceso.
 
-## Ver antes de aplicar
+## Automatización con control editorial
 
-Las acciones sensibles deben presentar resultados y estado al autor.
+La escala de producción necesita estados claros y decisiones explícitas del autor.
 
-## Herramientas separadas del contenido
+## La salida forma parte del sistema
 
-La plataforma de trabajo y el material narrativo cumplen funciones distintas.
+La exportación a EPUB y audio se integra en el recorrido de trabajo.
 
 ## Rendimiento y dependencia
 
@@ -41,6 +41,6 @@ No se publican cifras de rendimiento sin un ensayo identificado. La evidencia es
 
 ## Qué conviene demostrar después
 
-- Consolidar navegación, estados y recuperación de sesiones.
-- Demostrar un recorrido completo con una obra de muestra.
-- Ampliar evidencia de exportación y revisión editorial.
+- Preparar un caso público completo con una obra de muestra propia.
+- Mostrar la continuidad entre generación, revisión y exportación.
+- Ampliar evidencia de producción y recuperación de trabajos.

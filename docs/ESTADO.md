@@ -2,12 +2,12 @@
 
 [← Inicio](../README.md)
 
-**Estado publicado:** Herramienta de autor en desarrollo.  
+**Estado publicado:** Herramienta de producción editorial con IA.  
 **Fecha de revisión:** 28 de septiembre de 2026.
 
 ## Qué se ha comprobado
 
-La documentación actual describe una interfaz Textual y un modo de demostración sin llamadas a proveedores. Esta publicación revisa ese recorrido sin ejecutar generación de pago ni verificar todas las exportaciones.
+El propietario identifica Morgenstern como su automatizador de producción de libros con IA, EPUB y audiolibros. El README y las guías existentes documentan generación, coordinación editorial y exportación EPUB/audio. Esta revisión comprueba ese alcance documental sin ejecutar generación de pago ni publicar una obra de prueba.
 
 ## Alcance actual
 
@@ -17,9 +17,9 @@ La documentación actual describe una interfaz Textual y un modo de demostració
 
 ## Siguientes pasos
 
-- Consolidar navegación, estados y recuperación de sesiones.
-- Demostrar un recorrido completo con una obra de muestra.
-- Ampliar evidencia de exportación y revisión editorial.
+- Preparar un caso público completo con una obra de muestra propia.
+- Mostrar la continuidad entre generación, revisión y exportación.
+- Ampliar evidencia de producción y recuperación de trabajos.
 
 ## Cómo se mantiene este caso
 
