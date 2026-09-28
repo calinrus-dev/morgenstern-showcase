@@ -1,0 +1,13 @@
+{
+  "fixture": "synthetic; no AI generation",
+  "audio": {
+    "ok": true,
+    "kind": "audio",
+    "duration_seconds": 1.0,
+    "bytes": 32044
+  },
+  "sha256": {
+    "sample.epub": "de610c55f8e1e70e5833eeec8118027fb9279f8d188ce26221dd5b75ac66a3ff",
+    "tone.wav": "6584051260619346b6cc1fbb108aaf7fa6b86cc35f64ecd2032f7d43f34f93cc"
+  }
+}

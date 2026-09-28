@@ -1,0 +1,19 @@
+name: Verify public sample
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install media inspector
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - run: python3 --version && ffprobe -version
+      - run: python3 -m unittest discover -s test -v
+      - run: python3 samples/delivery_demo.py
+      - name: Compare published fixture
+        run: cmp build/public-demo/sample.epub examples/sample.epub && cmp build/public-demo/tone.wav examples/tone.wav

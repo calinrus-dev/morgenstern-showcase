@@ -1,49 +1,51 @@
-![Morgenstern — De una idea a libros y audiolibros.](assets/hero.svg)
+# Morgenstern / Generar no es entregar.
 
-# Morgenstern
+**Una línea de producción editorial con IA.** Ideas, estructura, capítulos, revisión, EPUB y audiolibro. El problema interesante no es pedirle texto a un modelo: es conservar el contexto de una obra, coordinar el trabajo y terminar con entregables revisables.
 
-**De una idea a libros y audiolibros.**
+**Python · Textual · Automatización editorial**
 
-Un sistema de automatización editorial con IA para transformar ideas, esquemas y borradores en obras organizadas, libros EPUB y audiolibros. Reúne generación, coordinación de producción, revisión y exportación en un mismo entorno de autor.
+## La obra manda
 
-**Stack:** Python · Textual · Automatización  
-**Estado:** Herramienta de producción editorial con IA
+La estructura acompaña al contenido. La generación forma parte de un recorrido que incluye decisiones del autor y salida editorial. Morgenstern está orientado a producir a escala sin convertir cada libro en una carpeta de respuestas sueltas.
 
-[Portfolio](https://github.com/calinrus-dev/portfolio) · [Experiencia](docs/EXPERIENCIA.md) · [Componentes](docs/COMPONENTES.md) · [Diseño técnico](docs/ARQUITECTURA.md) · [Demostraciones](docs/DEMOSTRACIONES.md) · [Estado](docs/ESTADO.md)
+~~~text
+Idea y esquema → Obra organizada → Generación coordinada
+                                     ↓
+                           Revisión y decisiones del autor
+                                     ↓
+                           EPUB / audio / entregables
+~~~
 
-## El problema que aborda
+[Recorrido del producto](docs/EXPERIENCIA.md) · [Responsabilidades y decisiones](docs/ARQUITECTURA.md)
 
-Producir obras con IA a escala requiere conservar estructura, contexto y decisiones editoriales a lo largo de muchos pasos. Morgenstern coordina ese recorrido para que el material generado forme parte de una obra y pueda convertirse en entregables revisables.
+## Abre una entrega. Después lee el código.
 
-## Qué compone la experiencia
+[**Entrega pública inspeccionable →**](https://calinrus-dev.github.io/morgenstern-showcase/) · [EPUB sintético](examples/sample.epub) · [Informe con hashes](examples/report.json)
 
-- **Obras y estructura.** Organización narrativa de proyectos, esquemas, capítulos y material de trabajo.
-- **Producción con IA.** Generación y coordinación de contenido a escala dentro de cada obra.
-- **Revisión y control.** Vista previa, decisiones del autor y seguimiento de la producción.
-- **EPUB y audiolibro.** Exportación editorial y generación de audio desde el mismo proyecto.
+Aquí hay dos piezas, con el origen bien separado:
 
-![Mapa conceptual de Morgenstern: Definir la obra → Coordinar la generación → Revisar el contenido → Exportar EPUB y audio.](assets/experiencia.svg)
+- **Una adaptación del validador multimedia real:** [media_gate.py](samples/media_gate.py). Inspecciona streams y duración mediante ffprobe. Se ha desacoplado de la configuración privada y endurecido frente a NaN, informes malformados y procesos que se cuelgan.
+- **Un generador nuevo para esta publicación:** [delivery_demo.py](samples/delivery_demo.py). Produce un EPUB mínimo determinista y un tono de un segundo. Sirve para repetir la comprobación sin proveedores, manuscritos ni cuentas. El tono no es un audiolibro y el generador no es el exportador privado.
 
-*Lámina explicativa con datos ficticios. Su contenido también está disponible como texto en [Componentes](docs/COMPONENTES.md).*
+[![Pruebas de la muestra](https://github.com/calinrus-dev/morgenstern-showcase/actions/workflows/verify.yml/badge.svg)](https://github.com/calinrus-dev/morgenstern-showcase/actions/workflows/verify.yml)
 
-## Decisiones que definen el proyecto
+~~~sh
+python3 -m unittest discover -s test -v
+python3 samples/delivery_demo.py
+python3 samples/media_gate.py build/public-demo/tone.wav --minimum 0.9
+~~~
 
-- **La obra es la unidad de producción.** Estructura, contexto y revisiones acompañan al material durante todo el proceso.
-- **Automatización con control editorial.** La escala de producción necesita estados claros y decisiones explícitas del autor.
-- **La salida forma parte del sistema.** La exportación a EPUB y audio se integra en el recorrido de trabajo.
+Python 3.11+ y FFmpeg/ffprobe. En Windows: `py -3`. Sin dependencias Python adicionales. CI reproduce el EPUB y el WAV y los compara byte a byte con los publicados.
 
-## Explorar el caso
+## Fallar antes de llamar «entrega» a un archivo
 
-- [Experiencia y recorrido](docs/EXPERIENCIA.md): intención, interacción y criterios de revisión.
-- [Componentes](docs/COMPONENTES.md): las piezas visibles y el papel de cada una.
-- [Diseño técnico](docs/ARQUITECTURA.md): responsabilidades y compromisos de diseño.
-- [Demostraciones](docs/DEMOSTRACIONES.md): qué enseñan las imágenes y cómo leer la evidencia.
-- [Estado y siguientes pasos](docs/ESTADO.md): alcance actual, comprobaciones y trabajo pendiente.
+Un fichero con extensión correcta puede estar vacío. Una duración NaN se puede colar en una comparación inocente. Un vídeo sin audio puede ser válido como formato y no cumplir el contrato de un audiolibro audiovisual. Esas diferencias están en [pruebas ejecutables](test/test_delivery.py), no escondidas bajo un «todo OK».
 
-## Sobre este repositorio
+La inspección de ffprobe comprueba contenedor, streams y duración; no escucha la narración ni decodifica cada frame. El EPUB tiene comprobaciones estructurales acotadas; no se anuncia certificación EPUBCheck. La muestra tampoco acredita una generación completa con IA, costes por libro ni calidad literaria.
 
-Caso de estudio público de un proyecto con implementación privada. Reúne documentación, diagramas e imágenes seleccionadas. Los detalles del motor, integraciones, datos operativos y código se mantienen en los repositorios privados.
+**Automatizar producción exige conservar el control editorial. El botón de generar todavía no sabe editar.**
 
-Revisión editorial: 28 de septiembre de 2026. Autor: [Calin Rus](https://github.com/calinrus-dev).
+[Estado del producto](docs/ESTADO.md) · [Origen y límites](docs/PROVENANCE.md) · [Verificación](docs/VERIFICATION.md) · [Portfolio](https://github.com/calinrus-dev/portfolio)
 
-[calinrus.com](https://calinrus.com) · [Instagram @c4linrus](https://www.instagram.com/c4linrus/) · [Todos los proyectos](https://github.com/calinrus-dev/portfolio)
+
+[Instagram @c4linrus](https://www.instagram.com/c4linrus/) · [LinkedIn / calinrus](https://www.linkedin.com/in/calinrus/)
