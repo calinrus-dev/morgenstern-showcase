@@ -6,6 +6,16 @@
 
 Producir obras con IA a escala requiere conservar estructura, contexto y decisiones editoriales a lo largo de muchos pasos. Morgenstern coordina ese recorrido para que el material generado forme parte de una obra y pueda convertirse en entregables revisables.
 
+## El nuevo estudio de escritorio
+
+La interfaz React + Tauri 2 es oscura por defecto. Reúne estructura, manuscrito y asistente contextual, con lectura, guardado de versiones y revisión de propuestas en la factoría. Las capturas siguientes corresponden a una obra de prueba y un proveedor simulado.
+
+![Estudio de escritura](../assets/interface/estudio-escritura.jpg)
+
+![Revisión en la factoría editorial](../assets/interface/factoria-editorial.jpg)
+
+La beta se encuentra en preparación. La exportación EPUB está integrada en el estudio; audio y vídeo permanecen en el motor y el CLI.
+
 ## El recorrido
 
 ### 1. Definir la obra

@@ -2,31 +2,32 @@
 
 [← Inicio](../README.md)
 
-**Estado publicado:** Herramienta de producción editorial con IA.  
-**Fecha de revisión:** 28 de septiembre de 2026.
+**Estado:** interfaz de escritorio en desarrollo; beta pública en preparación.
 
-## Qué se ha comprobado
+**Fecha de revisión:** 1 de octubre de 2026.
 
-El propietario identifica Morgenstern como su automatizador de producción de libros con IA, EPUB y audiolibros. El README y las guías existentes documentan generación, coordinación editorial y exportación EPUB/audio. Esta revisión comprueba ese alcance documental sin ejecutar generación de pago ni publicar una obra de prueba.
+## Nueva interfaz
 
-## Alcance actual
+El estudio React + Tauri 2 reúne estructura de la obra, editor Markdown, lectura, versiones y asistente contextual. La factoría editorial conecta objetivos, tareas aprobadas, generación y revisión de propuestas antes de aplicar una nueva versión. La exportación EPUB está integrada en el estudio.
 
-- La calidad de una obra exige revisión humana.
-- No se garantiza el resultado de proveedores externos ni una exportación validada universalmente.
-- El panel conceptual no se presenta como captura de la interfaz actual.
+[Estudio de escritura](../assets/interface/estudio-escritura.jpg) · [Factoría editorial](../assets/interface/factoria-editorial.jpg)
 
-## Siguientes pasos
+Estas capturas son reales y utilizan una obra de prueba. Las respuestas del chat y la propuesta del diff son simuladas; no se presentan como evaluación de calidad literaria o de un proveedor LLM.
 
-- Preparar un caso público completo con una obra de muestra propia.
-- Mostrar la continuidad entre generación, revisión y exportación.
-- Ampliar evidencia de producción y recuperación de trabajos.
+## Comprobaciones del producto privado
 
-## Cómo se mantiene este caso
+En el entorno local Linux se ha compilado y arrancado el cliente de escritorio. Se han comprobado los recorridos de creación, guardado de versiones, chat, revisión de propuestas y exportación EPUB. La suite Python pasó 1.501 pruebas, junto a los controles Ruff y mypy; también pasaron las pruebas Rust y del frontend.
 
-Las capacidades nuevas deben acompañarse de evidencia identificable: una revisión, una captura real o una demostración reproducible. Las propuestas y los resultados de revisiones anteriores conservan su contexto.
+Estas comprobaciones pertenecen al repositorio privado y se declaran aquí como contexto. Las pruebas que cualquier persona puede reproducir en este showcase están en [VERIFICATION.md](VERIFICATION.md).
 
-Este repositorio contiene una historia nueva de documentación pública. La implementación y los datos del producto se conservan en privado.
+La configuración de CI incluye Windows, pero la nueva aplicación no se ha probado todavía en una máquina Windows. La compilación Docker tampoco se ha ejecutado en esta revisión local. Los pipelines de audio y vídeo permanecen en el motor y no se anuncian como botones ya integrados en el estudio.
 
-## Evidencia ejecutable añadida
+## Próxima beta
 
-El escaparate incluye ahora una muestra pública acotada con pruebas y origen declarado. [Reproducir la comprobación](VERIFICATION.md). Su resultado no cambia por sí solo el estado de integración del producto completo descrito arriba.
+Estoy preparando una beta que pondré a disposición próximamente. Todavía no hay fecha de lanzamiento, instaladores públicos ni inscripción abierta. Este repositorio comunicará su disponibilidad y condiciones de prueba cuando estén definidas.
+
+## Alcance
+
+La generación requiere un proveedor configurado o un modelo local disponible. El modo local de la aplicación no implica que todos los proveedores funcionen sin conexión. La calidad de una obra necesita revisión humana.
+
+El núcleo del producto y los datos de usuario permanecen privados. Este showcase conserva su muestra pública ejecutable de EPUB/audio y su validador multimedia.

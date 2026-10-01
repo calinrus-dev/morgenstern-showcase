@@ -2,7 +2,28 @@
 
 **Una línea de producción editorial con IA.** Ideas, estructura, capítulos, revisión, EPUB y audiolibro. El problema interesante no es pedirle texto a un modelo: es conservar el contexto de una obra, coordinar el trabajo y terminar con entregables revisables.
 
-**Python · Textual · Automatización editorial**
+**React · Tauri 2 · Rust · Python · Automatización editorial**
+
+## Nueva interfaz de escritorio · beta próximamente
+
+Morgenstern incorpora un estudio de escritura oscuro por defecto: manuscrito, estructura de la obra y asistente editorial en un mismo espacio. La factoría permite proponer tareas, aprobar la producción y revisar los cambios antes de incorporarlos como una nueva versión.
+
+**Estoy preparando una beta que pondré a disposición próximamente.** Todavía no hay fecha ni descarga pública de la aplicación. Este showcase se actualizará cuando pueda probarse.
+
+![Estudio de escritura de Morgenstern: manuscrito, versiones y asistente contextual](assets/interface/estudio-escritura.jpg)
+
+![Factoría editorial de Morgenstern: cola de producción y revisión de cambios](assets/interface/factoria-editorial.jpg)
+
+Capturas reales de la interfaz del 1 de octubre de 2026, con una obra de prueba y respuestas simuladas. El diff de la factoría también corresponde a una propuesta de prueba; no acredita la calidad de un modelo ni una obra publicada.
+
+- **Escribir y organizar:** obras con estructuras adaptadas a su esquema, documentos de referencia, personajes y editor Markdown con vista de lectura.
+- **Conversar con contexto:** chat editorial vinculado a la obra o al nodo activo.
+- **Conservar el control:** versiones del manuscrito, revisión de diffs y aprobación antes de incorporar propuestas.
+- **Preparar la entrega:** exportación EPUB desde el estudio; el motor conserva los pipelines de audio y vídeo.
+
+La interfaz utiliza React y Tauri 2. Python mantiene la orquestación de agentes y los servicios editoriales; Rust se encarga de hashes paralelos y de supervisar trabajos FFmpeg con límites y timeouts. La aplicación de producción no necesita Electron ni un proceso Node residente. El cliente de escritorio y los modelos locales son componentes separados.
+
+[**Ver la nueva interfaz y el estado de la beta →**](https://calinrus-dev.github.io/morgenstern-showcase/) · [Estado y comprobaciones](docs/ESTADO.md)
 
 ## La obra manda
 

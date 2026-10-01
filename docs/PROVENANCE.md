@@ -10,6 +10,8 @@ media_gate.py adapta las comprobaciones del validador multimedia real. Elimina l
 
 ## Qué puede comprobar otra persona
 
+Las capturas de `assets/interface/` se tomaron el 1 de octubre de 2026 de la interfaz React/Tauri del producto en desarrollo. Muestran una obra sintética creada para comprobaciones locales, chat con proveedor mock y una propuesta editorial simulada. Son capturas de la aplicación, no diseños conceptuales. Los manuscritos, conversaciones y credenciales de usuarios no forman parte de esta publicación.
+
 El código público, las pruebas y el workflow están en este mismo repositorio. Se pueden clonar, ejecutar y discutir. La procedencia desde archivos privados es una declaración del autor: un lector externo no tiene acceso a ese historial para contrastarla. Las adaptaciones se describen arriba para no confundir una muestra con el producto completo.
 
 ## Límites

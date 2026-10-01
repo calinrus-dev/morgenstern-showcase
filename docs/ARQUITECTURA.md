@@ -2,45 +2,32 @@
 
 [← Inicio](../README.md)
 
-## Contexto
+## Responsabilidades
 
-Un sistema de automatización editorial con IA para transformar ideas, esquemas y borradores en obras organizadas, libros EPUB y audiolibros. Reúne generación, coordinación de producción, revisión y exportación en un mismo entorno de autor.
+**React + Tauri 2** presentan el estudio de escritura y la factoría. El cliente usa el WebView del sistema y llama al motor mediante un protocolo JSON local, sin Electron ni un servidor Node en producción. Node se utiliza para desarrollo y compilación de la interfaz.
 
-**Tecnologías asociadas al proyecto:** Python · Textual · Automatización.
+**Python** conserva la orquestación de agentes, los proveedores LLM, el contexto, el canon, los esquemas de obra, las tareas y el versionado editorial. La TUI Textual y el CLI headless siguen disponibles sobre los servicios compartidos.
 
-## Mapa de responsabilidades
-
-Este mapa conceptual organiza la explicación del producto; no representa endpoints, procesos desplegados ni contratos internos.
+**Rust** ejecuta hashes SHA-256 en paralelo y supervisa FFmpeg/ffprobe para audio y vídeo. Aplica límites de concurrencia, tiempos máximos y publicación de archivos temporales al terminar correctamente. FFmpeg sigue realizando la codificación multimedia.
 
 ```mermaid
 flowchart TD
-    A["Espacio de autor"] --> B["Producción con IA"]
-    B --> C["Revisión editorial"]
-    C --> D["Entregables EPUB y audio"]
+    A["Estudio React + Tauri 2"] -->|"JSON local"| B["Servicios editoriales Python"]
+    C["CLI y TUI Textual"] --> B
+    B --> D["Agentes, contexto y proveedores LLM"]
+    B --> E["Obras, tareas y versiones"]
+    B --> F["Runtime Rust"]
+    F --> G["Hashes paralelos"]
+    F --> H["FFmpeg / ffprobe"]
+    E --> I["Revisión humana y exportación EPUB"]
 ```
 
-## La obra es la unidad de producción
+## Datos y decisiones editoriales
 
-Estructura, contexto y revisiones acompañan al material durante todo el proceso.
+La estructura depende del esquema de la obra: no todas las obras se reducen a arcos y capítulos. Las propuestas se conservan en staging y requieren revisión para incorporarse al manuscrito. Los guardados generan versiones y detectan conflictos con cambios posteriores.
 
-## Automatización con control editorial
+Los modelos locales y los extras pesados de audio/embeddings se instalan según las necesidades del usuario. El tamaño del cliente de escritorio no representa el tamaño del motor Python, los modelos ni los recursos multimedia.
 
-La escala de producción necesita estados claros y decisiones explícitas del autor.
+## Estado de la integración
 
-## La salida forma parte del sistema
-
-La exportación a EPUB y audio se integra en el recorrido de trabajo.
-
-## Rendimiento y dependencia
-
-Mi criterio de trabajo es medir antes de optimizar: identificar el recorrido relevante, observar tiempo de respuesta y uso de recursos y comparar cambios con la misma carga. En sistemas nativos también me interesa la disposición de datos, la localidad de memoria y el trabajo repetido.
-
-Local-first es una preferencia arquitectónica: conservar una experiencia útil y control sobre los datos en el dispositivo, e incorporar servicios externos cuando aporten una función concreta. Su alcance varía por proyecto; no implica que todas las integraciones de este caso funcionen sin conexión.
-
-No se publican cifras de rendimiento sin un ensayo identificado. La evidencia específica disponible está en [Estado](ESTADO.md).
-
-## Qué conviene demostrar después
-
-- Preparar un caso público completo con una obra de muestra propia.
-- Mostrar la continuidad entre generación, revisión y exportación.
-- Ampliar evidencia de producción y recuperación de trabajos.
+El estudio integra EPUB y el flujo de revisión de la factoría. Los pipelines de audio y vídeo siguen accesibles desde el motor y el CLI. La beta se encuentra en preparación; [ESTADO.md](ESTADO.md) distingue comprobaciones locales, pruebas públicas y trabajo pendiente.

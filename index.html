@@ -1,4 +1,87 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'"><title>Generar no es entregar. · Calin Rus</title><meta name="description" content="Muestra pública ejecutable de Generar no es entregar.. Código, pruebas y límites explícitos."><link rel="stylesheet" href="demo/style.css"></head><body><main><nav><a href="https://github.com/calinrus-dev/morgenstern-showcase">Código y contexto</a><a href="https://github.com/calinrus-dev/morgenstern-showcase/actions/workflows/verify.yml">Pruebas automáticas</a><a href="https://github.com/calinrus-dev/portfolio">Portfolio</a></nav><p class="eyebrow">Morgenstern / puerta de calidad pública</p><h1>Generar no es entregar.</h1><p class="lead">Del borrador al EPUB y al audiolibro hay estructura, revisión y archivos que deben abrirse. Esta muestra hace visible una parte concreta: inspeccionar una entrega sin tocar proveedores ni manuscritos.</p><div class="grid"><section class="panel"><h2>Una entrega pequeña e inspeccionable</h2><p><a href="examples/sample.epub" download>Descargar EPUB sintético</a></p><p>Un capítulo escrito para esta muestra. ZIP determinista, navegación y metadatos inspeccionables.</p><audio controls preload="none" src="examples/tone.wav" aria-label="Tono de prueba de un segundo"></audio><p class="meta">El audio es un tono de 440 Hz y un segundo. No es voz, ni un audiolibro generado con IA.</p><p><a href="examples/report.json">Informe con hashes SHA-256</a></p></section><section class="panel"><h2>Reproducir la entrega</h2><pre>python3 -m unittest discover -s test -v
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Morgenstern · Estudio de escritura · Beta próximamente</title>
+  <meta name="description" content="La nueva interfaz de Morgenstern: estudio de escritura, asistente contextual y factoría editorial. React, Tauri 2, Rust y Python. Beta próximamente.">
+  <meta property="og:title" content="Morgenstern · Nueva interfaz · Beta próximamente">
+  <meta property="og:description" content="Manuscrito, versiones, asistente y revisión editorial en un mismo estudio. Estoy preparando una beta que pondré a disposición próximamente.">
+  <meta property="og:image" content="https://calinrus-dev.github.io/morgenstern-showcase/assets/interface/estudio-escritura.jpg">
+  <meta property="og:image:alt" content="Captura real del estudio de Morgenstern con una obra de prueba y un asistente simulado">
+  <meta property="og:url" content="https://calinrus-dev.github.io/morgenstern-showcase/">
+  <link rel="stylesheet" href="demo/style.css">
+</head>
+<body>
+<main>
+  <nav aria-label="Enlaces del proyecto">
+    <a href="https://github.com/calinrus-dev/morgenstern-showcase">Código y contexto</a>
+    <a href="https://github.com/calinrus-dev/morgenstern-showcase/blob/main/docs/ESTADO.md">Estado de la beta</a>
+    <a href="https://github.com/calinrus-dev/portfolio">Portfolio</a>
+  </nav>
+  <header class="product-header">
+    <p class="eyebrow">Morgenstern / el estudio de tu obra</p>
+    <p class="beta-badge">Beta en preparación · próximamente</p>
+    <h1>Tu obra, con espacio para escribir y decidir.</h1>
+    <p class="lead">Manuscrito, estructura, versiones y asistente editorial en una interfaz oscura por defecto. Una factoría para coordinar la producción sin perder el control de lo que llega al texto.</p>
+    <p class="beta-note">Estoy preparando una beta que pondré a disposición próximamente. Todavía no hay fecha ni descarga pública.</p>
+    <p class="stack">React · Tauri 2 · Rust · Python</p>
+  </header>
+  <section aria-labelledby="studio-title">
+    <h2 id="studio-title">Escribir, leer y conversar con la obra</h2>
+    <p>La estructura a la izquierda, el manuscrito en el centro y el asistente contextual a la derecha. Editor Markdown, vista de lectura y versiones conservadas para volver sobre tus decisiones.</p>
+    <figure class="interface-shot">
+      <a href="assets/interface/estudio-escritura.jpg"><img src="assets/interface/estudio-escritura.jpg" alt="Estudio oscuro de Morgenstern: estructura de una novela de prueba, lectura del capítulo, historial de versiones y chat contextual" width="1280" height="720" fetchpriority="high"></a>
+      <figcaption>Captura real del 1 de octubre de 2026. Obra de prueba y chat con respuesta simulada. Abre la imagen para verla a tamaño completo.</figcaption>
+    </figure>
+  </section>
+  <section aria-labelledby="factory-title">
+    <h2 id="factory-title">Producir con revisión editorial</h2>
+    <p>Define un objetivo, aprueba las tareas y revisa la propuesta. Los diffs hacen visibles los cambios antes de incorporarlos como una nueva versión del manuscrito.</p>
+    <figure class="interface-shot">
+      <a href="assets/interface/factoria-editorial.jpg"><img src="assets/interface/factoria-editorial.jpg" alt="Factoría editorial de Morgenstern con objetivo, cola de producción y revisión de los cambios de una propuesta simulada" width="1280" height="720" loading="lazy"></a>
+      <figcaption>Captura real de una comprobación local. La propuesta mostrada es simulada y no representa una obra publicada ni una evaluación de un modelo.</figcaption>
+    </figure>
+  </section>
+  <div class="grid">
+    <section class="panel">
+      <h2>Una obra organizada</h2>
+      <p>Estructuras según el tipo de obra, referencias, personajes y contexto editorial. La exportación EPUB se integra en el estudio; audio y vídeo siguen disponibles en el motor.</p>
+    </section>
+    <section class="panel">
+      <h2>Responsabilidades claras</h2>
+      <p>React y Tauri 2 para el escritorio. Python para agentes y servicios editoriales. Rust para hashes paralelos y supervisión de FFmpeg con límites y timeouts.</p>
+      <p class="meta">Sin Electron ni Node residente en producción. Los modelos y el motor se instalan por separado del cliente.</p>
+    </section>
+  </div>
+  <p><a href="https://github.com/calinrus-dev/morgenstern-showcase/blob/main/docs/EXPERIENCIA.md">Recorrido de uso</a> · <a href="https://github.com/calinrus-dev/morgenstern-showcase/blob/main/docs/ARQUITECTURA.md">Arquitectura</a> · <a href="https://github.com/calinrus-dev/morgenstern-showcase/blob/main/docs/ESTADO.md">Comprobaciones y próximos pasos</a></p>
+  <section class="delivery-section" aria-labelledby="delivery-title">
+    <p class="eyebrow">Muestra pública ejecutable</p>
+    <h2 id="delivery-title">Generar no es entregar.</h2>
+    <p>El showcase conserva su demostración de EPUB/audio y su puerta de calidad multimedia. Esta pieza pública es independiente de la futura beta del escritorio.</p>
+    <div class="grid">
+      <section class="panel">
+        <h3>Una entrega pequeña e inspeccionable</h3>
+        <p><a href="examples/sample.epub" download>Descargar EPUB sintético</a></p>
+        <p>Un capítulo escrito para esta muestra. ZIP determinista, navegación y metadatos inspeccionables.</p>
+        <audio controls preload="none" src="examples/tone.wav" aria-label="Tono de prueba de un segundo"></audio>
+        <p class="meta">El audio es un tono de 440 Hz y un segundo. No es voz ni un audiolibro generado con IA.</p>
+        <p><a href="examples/report.json">Informe con hashes SHA-256</a></p>
+      </section>
+      <section class="panel">
+        <h3>Reproducir la entrega</h3>
+        <pre>python3 -m unittest discover -s test -v
 python3 samples/delivery_demo.py
-python3 samples/media_gate.py build/public-demo/tone.wav --minimum 0.9</pre><p>Python 3.11+ y FFmpeg/ffprobe. Biblioteca estándar, sin paquetes Python. En Windows puedes usar <code>py -3</code>.</p><p>La puerta rechaza archivos vacíos, duración no finita, streams ausentes, resultados corruptos y procesos que exceden el tiempo límite.</p></section></div><p class="status">Validación estructural acotada del EPUB. No equivale a una certificación EPUBCheck ni a verificar toda la producción editorial.</p><footer>Muestra pública acotada. Consulta el origen, las adaptaciones y los límites en <a href="https://github.com/calinrus-dev/morgenstern-showcase/blob/main/docs/PROVENANCE.md">PROVENANCE.md</a>. Se ejecuta en tu navegador, sin cuentas ni llamadas a servicios externos.</footer></main><script type="module" src="demo/app.js"></script></body></html>
+python3 samples/media_gate.py build/public-demo/tone.wav --minimum 0.9</pre>
+        <p>Python 3.11+ y FFmpeg/ffprobe. Biblioteca estándar, sin paquetes Python. En Windows puedes usar <code>py -3</code>.</p>
+        <p><a href="https://github.com/calinrus-dev/morgenstern-showcase/actions/workflows/verify.yml">Pruebas automáticas de la muestra</a></p>
+      </section>
+    </div>
+    <p class="status">Validación estructural acotada del EPUB. No equivale a una certificación EPUBCheck ni a verificar toda la producción editorial.</p>
+  </section>
+  <footer>Producto en desarrollo de Calin Rus. Las capturas utilizan contenido de prueba; el núcleo y los datos de usuario permanecen privados. Consulta <a href="https://github.com/calinrus-dev/morgenstern-showcase/blob/main/docs/PROVENANCE.md">origen y alcance</a>. Esta página no realiza llamadas a proveedores LLM.</footer>
+</main>
+<script type="module" src="demo/app.js"></script>
+</body>
+</html>

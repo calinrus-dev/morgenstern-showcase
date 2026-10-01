@@ -25,6 +25,8 @@ La ilustración reúne las piezas y sus relaciones. Sus estados, textos de muest
 
 ## Evidencia disponible
 
-El propietario identifica Morgenstern como su automatizador de producción de libros con IA, EPUB y audiolibros. El README y las guías existentes documentan generación, coordinación editorial y exportación EPUB/audio. Esta revisión comprueba ese alcance documental sin ejecutar generación de pago ni publicar una obra de prueba.
+Desde el 1 de octubre de 2026, el showcase incluye capturas reales del [estudio de escritura](../assets/interface/estudio-escritura.jpg) y de la [factoría editorial](../assets/interface/factoria-editorial.jpg). Se utilizaron una obra de prueba, un proveedor mock y una propuesta simulada para comprobar guardado de versiones, chat, revisión de diffs y exportación EPUB. No se ejecutó generación de pago ni se publicó una obra.
+
+La lámina anterior conserva su carácter conceptual. Las nuevas capturas muestran la interfaz React + Tauri 2 en desarrollo; la beta pública está en preparación.
 
 [Alcance y próximos pasos](ESTADO.md)
